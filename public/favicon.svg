@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="AI 解剖学">
+  <!-- 底：象牙白纸面 + 羊皮纸描边，与项目配色一致 -->
+  <rect width="32" height="32" rx="5" fill="#faf6ef" stroke="#c7b79a" stroke-width="1.2"/>
+
+  <!-- 抽象大脑轮廓（暗酒红实填） -->
+  <path
+    d="M16 5.6
+       C 12.6 4.2, 8.7 5.6, 7.2 8.5
+       C 5.2 9.6, 4.3 12.1, 5.4 14.3
+       C 4.4 16.6, 5.2 19.1, 7.3 20.5
+       C 7.7 23.4, 10.6 25.9, 14 25.5
+       C 15 26.5, 17 26.5, 18 25.5
+       C 21.4 25.9, 24.3 23.4, 24.7 20.5
+       C 26.8 19.1, 27.6 16.6, 26.6 14.3
+       C 27.7 12.1, 26.8 9.6, 24.8 8.5
+       C 23.3 5.6, 19.4 4.2, 16 5.6
+       Z"
+    fill="#8a3b33" />
+
+  <!-- 脑沟：以纸面色描线，克制、无发光 -->
+  <g fill="none" stroke="#faf6ef" stroke-linecap="round" opacity="0.8">
+    <path d="M16 6.9 V25.2" stroke-width="1.1" opacity="0.7" />
+    <path d="M10.2 12.2 C 12.1 13.3, 12.9 15.2, 11.7 17.4" stroke-width="1" opacity="0.55" />
+    <path d="M21.8 12.2 C 19.9 13.3, 19.1 15.2, 20.3 17.4" stroke-width="1" opacity="0.55" />
+    <path d="M8.6 18.4 C 10.4 19.4, 11.6 20.9, 11.6 22.6" stroke-width="0.9" opacity="0.4" />
+    <path d="M23.4 18.4 C 21.6 19.4, 20.4 20.9, 20.4 22.6" stroke-width="0.9" opacity="0.4" />
+  </g>
+</svg>
