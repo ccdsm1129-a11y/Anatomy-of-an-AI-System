@@ -19,8 +19,8 @@
   background: var(--bg-warm);
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
-  overflow-x: hidden;
+  /* 滚动交给内部 .systems，避免列内其它区块被 flex 压缩 */
+  overflow: hidden;
 }
 
 /* —— 中栏：SVG 探索区 —— */

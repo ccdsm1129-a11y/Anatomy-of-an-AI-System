@@ -4,6 +4,7 @@
 
 /* ============ 左栏：品牌 ============ */
 .brand {
+  flex: none;
   padding: var(--sp-5) var(--sp-5) var(--sp-4);
   border-bottom: 1px solid var(--line-parchment);
 }
@@ -30,6 +31,7 @@
 
 /* ============ 视图切换 ============ */
 .view-switch {
+  flex: none;
   display: flex;
   margin: var(--sp-4) var(--sp-5) 0;
   border: 1px solid var(--line-tan);
@@ -53,7 +55,10 @@
 
 /* ============ 系统导航 ============ */
 .systems {
-  flex: 1;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
   padding: var(--sp-4) 0 var(--sp-5);
 }
 .system-group {
@@ -140,6 +145,7 @@
 
 /* ============ 进度 ============ */
 .progress {
+  flex: none;
   padding: var(--sp-4) var(--sp-5);
   border-top: 1px solid var(--line-parchment);
 }
@@ -174,6 +180,7 @@
 
 /* ============ 演示入口 / 声音开关 ============ */
 .nav-foot {
+  flex: none;
   padding: 0 var(--sp-5) var(--sp-5);
   display: flex;
   flex-direction: column;
