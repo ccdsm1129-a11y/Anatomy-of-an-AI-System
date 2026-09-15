@@ -1,0 +1,86 @@
+/* ============================================================
+   Design Tokens — 《AI 解剖学》
+   克制、温暖、可信：高端医学图鉴 + 现代信息设计
+   ============================================================ */
+
+:root {
+  /* —— 背景与纸张 —— */
+  --bg-ivory: #faf6ef;
+  --bg-warm: #f5f1e8;
+  --bg-panel: #fbf8f2;
+  --bg-raise: #ffffff;
+
+  /* —— 正文 —— */
+  --ink-charcoal: #2b2520;
+  --ink-brown: #1f1a16;
+  --ink-soft: #6b6157;
+  --ink-muted: #9a8f82;
+
+  /* —— 边框 —— */
+  --line-parchment: #e3d9c5;
+  --line-tan: #d8cbb2;
+  --line-strong: #c7b79a;
+
+  /* —— 主强调 —— */
+  --accent-wine: #7a2e2a;
+  --accent-ochre: #b5763a;
+  --accent-terra: #a9553d;
+
+  /* —— 辅助 —— */
+  --aux-brass: #9a7b4f;
+  --aux-sage: #6e7b6a;
+  --aux-smoke: #5c5548;
+
+  /* —— 6 系统（低饱和） —— */
+  --sys-perception: #6e7b6a;   /* 灰绿 */
+  --sys-cognition: #8a3b33;    /* 暗酒红 */
+  --sys-memory: #9a7b4f;       /* 黄铜 */
+  --sys-action: #b5763a;       /* 赭石 */
+  --sys-runtime: #6b5f4f;      /* 烟棕 */
+  --sys-safety: #a0553f;       /* 陶土红 */
+
+  /* —— SVG 用色 —— */
+  --body-outline: #b9b0a3;
+  --organ-default-fill: #e7ddcb;
+  --organ-default-stroke: #b9ae9a;
+  --organ-hover-fill: #d8cbb2;
+  --organ-selected-fill: #8a3b33;
+  --organ-selected-stroke: #5c2620;
+  --organ-dim-opacity: 0.32;
+
+  /* —— 字体 —— */
+  --font-serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", Georgia, "Times New Roman", serif;
+  --font-sans: "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", "JetBrains Mono", "SF Mono", ui-monospace, "Menlo", monospace;
+
+  /* —— 字号 —— */
+  --fs-xs: 11px;
+  --fs-sm: 12.5px;
+  --fs-base: 14px;
+  --fs-md: 15.5px;
+  --fs-lg: 18px;
+  --fs-xl: 22px;
+  --fs-2xl: 28px;
+  --fs-title: 34px;
+
+  /* —— 间距 —— */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+
+  /* —— 圆角（克制） —— */
+  --radius: 3px;
+  --radius-md: 4px;
+
+  /* —— 阴影（极少使用） —— */
+  --shadow-drawer: 0 -8px 30px rgba(31, 26, 22, 0.10);
+
+  /* —— 布局尺寸 —— */
+  --nav-w: 300px;
+  --panel-w: 400px;
+  --topbar-h: 0px;
+}

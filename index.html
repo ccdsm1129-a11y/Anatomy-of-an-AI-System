@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>AI 解剖学 · Anatomy of an AI System</title>
+    <meta
+      name="description"
+      content="一个智能系统如何感知、思考、记忆与行动——用人体解剖的隐喻，理解完整的 AI 系统。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/styles/tokens.css" />
+    <link rel="stylesheet" href="./src/styles/base.css" />
+    <link rel="stylesheet" href="./src/styles/layout.css" />
+    <link rel="stylesheet" href="./src/styles/components.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- 左栏：系统导航 -->
+      <aside class="col-nav" id="col-nav" aria-label="系统导航">
+        <div class="brand">
+          <h1 class="brand-title">AI 解剖学</h1>
+          <p class="brand-sub">Anatomy of an AI System</p>
+          <p class="brand-tagline">LLM 是 AI 的大脑，但大脑并不等于完整的 AI 系统。</p>
+        </div>
+
+        <div class="view-switch" role="tablist" aria-label="视图切换">
+          <button class="view-btn is-active" data-view="full" role="tab" aria-selected="true">完整系统</button>
+          <button class="view-btn" data-view="brain" role="tab" aria-selected="false">大脑特写</button>
+        </div>
+
+        <nav class="systems" id="systems" aria-label="六大系统"></nav>
+
+        <div class="progress">
+          <div class="progress-label">已探索 <span class="mono" id="progress-count">0</span> / <span id="progress-total">20</span></div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+          <button class="progress-reset" id="progress-reset">重置进度</button>
+        </div>
+
+        <div class="nav-foot">
+          <button class="demo-entry" id="demo-entry">
+            <span class="play-ico">▶</span> 观看 AI 完成任务
+          </button>
+          <button class="sound-toggle" id="sound-toggle" aria-pressed="false">
+            <span>声音</span><span id="sound-state" class="mono">关</span>
+          </button>
+        </div>
+      </aside>
+
+      <!-- 中栏：SVG 探索区 -->
+      <main class="col-canvas" id="col-canvas" aria-label="AI 生命体探索区">
+        <div class="canvas-head">
+          <div class="canvas-title" id="canvas-title">完整系统</div>
+          <div class="canvas-sub" id="canvas-sub">探索一个人工智能生命体的各个组成部分</div>
+          <button class="reset-view" id="reset-view">重置视图</button>
+        </div>
+        <div class="canvas-stage" id="canvas-stage">
+          <div class="svg-host" id="svg-host" role="application" aria-label="人体解剖图，可交互"></div>
+          <div class="view-hint" id="view-hint" hidden></div>
+        </div>
+      </main>
+
+      <!-- 右栏：信息面板 -->
+      <aside class="col-panel" id="col-panel" aria-label="结构详情">
+        <button class="panel-close" id="panel-close" aria-label="关闭详情">×</button>
+        <div class="panel-content" id="panel-content"></div>
+      </aside>
+
+      <!-- 遮罩（平板/移动） -->
+      <div class="scrim" id="scrim"></div>
+
+      <!-- 顶栏（平板/移动） -->
+      <div class="topbar" id="topbar">
+        <button class="menu-btn" id="menu-btn" aria-label="打开导航">☰</button>
+        <span class="tb-title">AI 解剖学</span>
+        <button class="menu-btn" id="panel-btn" aria-label="打开详情">ⓘ</button>
+      </div>
+    </div>
+
+    <!-- 任务演示覆盖层 -->
+    <div class="demo-overlay" id="demo-overlay" hidden></div>
+
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>
