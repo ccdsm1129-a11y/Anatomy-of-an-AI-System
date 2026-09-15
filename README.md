@@ -279,15 +279,11 @@ Anatomy of an AI System/
 
 ## 部署到 GitHub Pages
 
-仓库已内置工作流 `.github/workflows/deploy-pages.yml`，推送到 `main` 后自动构建并发布，也可在 Actions 页面手动触发。
+**站点地址**：<https://ccdsm1129-a11y.github.io/Anatomy-of-an-AI-System/>
 
-首次启用（只需一次）：
+推送到 `main` 后自动构建并发布，也可在 **Actions → Deploy to GitHub Pages → Run workflow** 手动触发。工作流依次执行 `npm ci` → `tsc --noEmit` → `vite build` → 发布 `dist/`。
 
-1. 打开仓库 **Settings → Pages**
-2. 将 **Source** 设为 **GitHub Actions**
-3. 推送到 `main`，或在 **Actions → Deploy to GitHub Pages → Run workflow** 手动触发
-
-发布地址：<https://ccdsm1129-a11y.github.io/Anatomy-of-an-AI-System/>
+> **Fork 后自行部署**：本项目已配置好工作流，但 GitHub 要求由仓库所有者在 **Settings → Pages** 中把 **Source** 手动设为 **GitHub Actions**（该操作无法通过 API 以 `GITHUB_TOKEN` 完成）。设置一次之后，推送即自动发布到你自己的 Pages 地址。
 
 之所以能在 Pages 子路径下正常工作，是因为 `vite.config.ts` 中设置了 `base: './'`（相对路径）。同一份构建产物因此既可用于 Pages 子目录，也能以 `file://` 直接打开。
 

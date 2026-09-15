@@ -33,9 +33,6 @@ jobs:
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
-        with:
-          # 若 Pages 尚未启用，尝试自动启用并设为 GitHub Actions 作为源
-          enablement: true
 
       - name: Install dependencies
         run: npm ci
