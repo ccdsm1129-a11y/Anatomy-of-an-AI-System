@@ -4,6 +4,8 @@
 
 **LLM 是 AI 的大脑，但大脑并不等于完整的 AI 系统。**
 
+**在线体验**：<https://ccdsm1129-a11y.github.io/Anatomy-of-an-AI-System/>
+
 本项目用一个可交互的人体解剖图作为**信息架构的隐喻**，把一个完整的 AI 系统拆成 6 大系统、20 个结构，帮助非技术用户、企业管理者和 CEO 理解：除了大语言模型，一个能真正在业务中运转的 AI 系统还需要感知、记忆、行动、运行、安全与反馈机制。
 
 > ⚠️ 这是教学隐喻，不是人体医学科普产品，也不宣称人体与计算机系统存在严格的科学对应关系。
@@ -22,6 +24,7 @@
 - [已知限制](#已知限制)
 - [可扩展的任务场景](#可扩展的任务场景)
 - [技术栈](#技术栈)
+- [部署到 GitHub Pages](#部署到-github-pages)
 - [许可与署名](#许可与署名)
 
 ---
@@ -274,11 +277,27 @@ Anatomy of an AI System/
 
 ---
 
+## 部署到 GitHub Pages
+
+仓库已内置工作流 `.github/workflows/deploy-pages.yml`，推送到 `main` 后自动构建并发布，也可在 Actions 页面手动触发。
+
+首次启用（只需一次）：
+
+1. 打开仓库 **Settings → Pages**
+2. 将 **Source** 设为 **GitHub Actions**
+3. 推送到 `main`，或在 **Actions → Deploy to GitHub Pages → Run workflow** 手动触发
+
+发布地址：<https://ccdsm1129-a11y.github.io/Anatomy-of-an-AI-System/>
+
+之所以能在 Pages 子路径下正常工作，是因为 `vite.config.ts` 中设置了 `base: './'`（相对路径）。同一份构建产物因此既可用于 Pages 子目录，也能以 `file://` 直接打开。
+
+---
+
 ## 许可与署名
 
-- 两张人体解剖 SVG 由 **European Bioinformatics Institute (EBI)** 在 **Apache-2.0** 协议下发布，版权归 EBI 所有。本项目保留其在 SVG 内嵌的署名图标（链接至 <https://www.ebi.ac.uk/gxa/licence.html>）。
-- 使用本项目的解剖图资产时，请一并遵守上游包的许可条款。
-- 本项目的**代码部分**暂无附加许可文件；如需在特定条款下使用或分发代码，请先通过 Issue 联系。
+本项目采用 **MIT License**，详见 [LICENSE](./LICENSE)。你可自由使用、修改、分发本项目代码（包括商业用途），只需保留版权声明。
+
+**第三方资产说明**：两张人体解剖 SVG（`homo_sapiens.male.svg`、`homo_sapiens.brain.svg`）来自 [European Bioinformatics Institute (EBI)](https://www.ebi.ac.uk/) 以 **Apache-2.0** 协议发布的 [`@ebi-gene-expression-group/anatomogram`](https://www.npmjs.com/package/@ebi-gene-expression-group/anatomogram) 包，**版权归 EBI 所有，不适用本项目的 MIT 许可**。本项目保留其在 SVG 内嵌的署名图标（链接至 <https://www.ebi.ac.uk/gxa/licence.html>）。二次分发时请一并遵守上游许可条款。
 
 ### 致谢
 
